@@ -1,5 +1,5 @@
 Source: pacstall
-Section: devel
+Section: admin
 Priority: optional
 Maintainer: Develop Team <develop@home.heaven>
 Build-Depends:
