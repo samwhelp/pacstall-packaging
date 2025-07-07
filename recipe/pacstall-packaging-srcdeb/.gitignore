@@ -1,0 +1,5 @@
+*.deb
+*.changes
+*.buildinfo
+*.dsc
+*.tar.xz

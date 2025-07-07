@@ -1,0 +1,22 @@
+Source: pacstall
+Section: devel
+Priority: optional
+Maintainer: Develop Team <develop@home.heaven>
+Build-Depends:
+ debhelper (>= 10),
+ make
+Standards-Version: 4.7.2
+Homepage: https://github.com/samwhelp/pacstall-packaging
+Vcs-Browser: https://github.com/pacstall/pacstall
+Vcs-Git: https://github.com/pacstall/pacstall.git
+
+Package: pacstall
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: An AUR-inspired package manager for Ubuntu
+ Pacstall is the AUR Ubuntu wishes it had.
+ It takes the concept of the AUR and puts a spin on it,
+ making it easier to install and update downstream programs,
+ without scouring github repos and the likes.

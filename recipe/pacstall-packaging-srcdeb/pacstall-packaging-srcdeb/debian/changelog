@@ -1,0 +1,6 @@
+pacstall (0.1.1) unstable; urgency=low
+
+  * Initial release  <develop@home.heaven>
+  * Creating debian package for pacstall
+
+ -- Develop Team <develop@home.heaven>  Mon, 07 Jul 2025 20:41:17 +0800
