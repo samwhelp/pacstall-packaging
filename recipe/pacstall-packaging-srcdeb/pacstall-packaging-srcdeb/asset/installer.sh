@@ -215,6 +215,25 @@ mod_project_install_man_real_pacstall_8 () {
 	return 0
 }
 
+mod_project_install_repo () {
+
+	local des_dir_path="${pkgdir}/usr/share/pacstall/repo"
+	local des_file_path="${pkgdir}/usr/share/pacstall/repo/pacstallrepo"
+
+
+	echo
+	echo mkdir -p "${des_dir_path}"
+	mkdir -p "${des_dir_path}"
+
+
+	echo
+	echo echo "https://raw.githubusercontent.com/pacstall/pacstall-programs/master" '|' tee "${des_file_path}"
+	echo "https://raw.githubusercontent.com/pacstall/pacstall-programs/master" | tee "${des_file_path}" 2>&1 >/dev/null
+
+
+	return 0
+}
+
 
 
 
@@ -251,9 +270,10 @@ model_start () {
 	mod_project_install_bin
 	mod_project_install_scripts
 	mod_project_install_completions
-
-
 	mod_project_install_man
+
+
+	mod_project_install_repo
 
 
 
