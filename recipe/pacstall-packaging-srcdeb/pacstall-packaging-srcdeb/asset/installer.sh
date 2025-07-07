@@ -280,6 +280,60 @@ mod_project_install_message_compile () {
 	return 0
 }
 
+mod_project_install_dir () {
+
+	mod_project_install_dir_for_log
+	mod_project_install_dir_for_metadata
+	mod_project_install_dir_for_cache
+	mod_project_install_dir_for_src
+
+	return 0
+}
+
+mod_project_install_dir_for_log () {
+
+	local des_dir_path="${pkgdir}/var/log/pacstall/error_log"
+
+	echo
+	echo mkdir -p "${des_dir_path}"
+	mkdir -p "${des_dir_path}"
+
+	return 0
+}
+
+mod_project_install_dir_for_metadata () {
+
+	local des_dir_path="${pkgdir}/var/lib/pacstall/metadata"
+
+	echo
+	echo mkdir -p "${des_dir_path}"
+	mkdir -p "${des_dir_path}"
+
+	return 0
+}
+
+mod_project_install_dir_for_cache () {
+
+	local des_dir_path="${pkgdir}/var/cache/pacstall"
+
+	echo
+	echo mkdir -p "${des_dir_path}"
+	mkdir -p "${des_dir_path}"
+
+	return 0
+}
+
+mod_project_install_dir_for_src () {
+
+	local des_dir_path="${pkgdir}/usr/src/pacstall"
+
+	echo
+	echo mkdir -p "${des_dir_path}"
+	mkdir -p "${des_dir_path}"
+
+	return 0
+}
+
 
 
 
@@ -320,6 +374,7 @@ model_start () {
 	mod_project_install_man
 	mod_project_install_repo
 	mod_project_install_message
+	mod_project_install_dir
 
 
 
