@@ -139,6 +139,83 @@ mod_project_install_completions_for_fish () {
 	return 0
 }
 
+mod_project_install_man () {
+
+	mod_project_install_man_to_compress
+	mod_project_install_man_real
+
+	return 0
+}
+
+mod_project_install_man_to_compress () {
+
+	mod_project_install_man_to_compress_pacstall_5
+	mod_project_install_man_to_compress_pacstall_8
+
+	return 0
+}
+
+mod_project_install_man_to_compress_pacstall_5 () {
+
+	local src_file_path="${prjdir}/misc/man/pacstall.5"
+
+	echo
+	echo gzip -9n "${src_file_path}"
+	gzip -9n "${src_file_path}"
+
+
+	return 0
+}
+
+mod_project_install_man_to_compress_pacstall_8 () {
+
+	local src_file_path="${prjdir}/misc/man/pacstall.8"
+
+	echo
+	echo gzip -9n "${src_file_path}"
+	gzip -9n "${src_file_path}"
+
+
+	return 0
+}
+
+mod_project_install_man_real () {
+
+	mod_project_install_man_real_pacstall_5
+	mod_project_install_man_real_pacstall_8
+
+	return 0
+}
+
+mod_project_install_man_real_pacstall_5 () {
+
+	local src_file_path="${prjdir}/misc/man/pacstall.5.gz"
+	local des_file_path="${pkgdir}/usr/share/man/man5/pacstall.5.gz"
+
+
+	echo
+	echo install -Dm644 "${src_file_path}" "${des_file_path}"
+	install -Dm644 "${src_file_path}" "${des_file_path}"
+
+
+	return 0
+}
+
+mod_project_install_man_real_pacstall_8 () {
+
+	local src_file_path="${prjdir}/misc/man/pacstall.8.gz"
+	local des_file_path="${pkgdir}/usr/share/man/man8/pacstall.8.gz"
+
+
+	echo
+	echo install -Dm644 "${src_file_path}" "${des_file_path}"
+	install -Dm644 "${src_file_path}" "${des_file_path}"
+
+
+	return 0
+}
+
+
 
 
 ##
@@ -174,6 +251,9 @@ model_start () {
 	mod_project_install_bin
 	mod_project_install_scripts
 	mod_project_install_completions
+
+
+	mod_project_install_man
 
 
 
