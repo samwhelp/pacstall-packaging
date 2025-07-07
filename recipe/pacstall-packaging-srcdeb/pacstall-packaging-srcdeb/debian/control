@@ -4,7 +4,9 @@ Priority: optional
 Maintainer: Develop Team <develop@home.heaven>
 Build-Depends:
  debhelper (>= 10),
- make
+ make,
+ gettext,
+ gzip,
 Standards-Version: 4.7.2
 Homepage: https://github.com/samwhelp/pacstall-packaging
 Vcs-Browser: https://github.com/pacstall/pacstall
@@ -14,7 +16,28 @@ Package: pacstall
 Architecture: all
 Depends:
  ${misc:Depends},
- ${shlibs:Depends}
+ bash,
+ curl,
+ wget,
+ git,
+ unzip,
+ zstd,
+ tar,
+ gzip,
+ sensible-utils,
+ iputils-ping,
+ lsb-release,
+ aptitude,
+ bubblewrap,
+ build-essential,
+ jq,
+ distro-info-data,
+ gettext,
+Recommends:
+ axel,
+ ninja-build,
+ meson,
+ spdx-licenses,
 Description: An AUR-inspired package manager for Ubuntu
  Pacstall is the AUR Ubuntu wishes it had.
  It takes the concept of the AUR and puts a spin on it,
