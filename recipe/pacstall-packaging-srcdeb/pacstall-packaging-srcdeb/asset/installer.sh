@@ -234,6 +234,52 @@ mod_project_install_repo () {
 	return 0
 }
 
+mod_project_install_message () {
+
+	mod_project_install_message_prepare_dir
+	mod_project_install_message_compile
+
+	return 0
+}
+
+mod_project_install_message_prepare_dir () {
+
+	local src_po_dir_path="${prjdir}/misc/po"
+
+
+	mapfile -t linguas < "${src_po_dir_path}/LINGUAS"
+
+	local lang=""
+
+	for lang in "${linguas[@]}"; do
+		echo
+		echo mkdir -p "${pkgdir}/usr/share/locale/${lang}/LC_MESSAGES/"
+		mkdir -p "${pkgdir}/usr/share/locale/${lang}/LC_MESSAGES/"
+	done
+
+
+	return 0
+}
+
+mod_project_install_message_compile () {
+
+	local src_po_dir_path="${prjdir}/misc/po"
+
+
+	mapfile -t linguas < "${src_po_dir_path}/LINGUAS"
+
+	local lang=""
+
+	for lang in "${linguas[@]}"; do
+		echo
+		echo msgfmt -o "${pkgdir}/usr/share/locale/${lang}/LC_MESSAGES/pacstall.mo" "${src_po_dir_path}/${lang}.po"
+		msgfmt -o "${pkgdir}/usr/share/locale/${lang}/LC_MESSAGES/pacstall.mo" "${src_po_dir_path}/${lang}.po"
+	done
+
+
+	return 0
+}
+
 
 
 
@@ -270,11 +316,10 @@ model_start () {
 	mod_project_install_bin
 	mod_project_install_scripts
 	mod_project_install_completions
+
 	mod_project_install_man
-
-
 	mod_project_install_repo
-
+	mod_project_install_message
 
 
 
