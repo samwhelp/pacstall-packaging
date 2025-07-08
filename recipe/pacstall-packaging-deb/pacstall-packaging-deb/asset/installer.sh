@@ -345,7 +345,7 @@ model_start () {
 
 
 	echo
-	echo "P: theme install"
+	echo "P: pacstall install"
 
 	echo
 	echo "Shell: DESTDIR=${DESTDIR}"
