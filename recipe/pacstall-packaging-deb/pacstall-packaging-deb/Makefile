@@ -86,3 +86,8 @@ deb-build-essential:
 deb-build:
 	./deb-build.sh
 .PHONY: deb-build
+
+
+deb-install:
+	sudo dpkg -i ./build/deb/pacstall.deb
+.PHONY: deb-install
