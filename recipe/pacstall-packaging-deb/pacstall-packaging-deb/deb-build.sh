@@ -83,9 +83,9 @@ mod_packaging_start () {
 
 	"${REF_BASE_DIR_PATH}/clean.sh"
 
-	"${REF_BASE_DIR_PATH}//build.sh"
+	"${REF_BASE_DIR_PATH}/build.sh"
 
-	"${REF_BASE_DIR_PATH}//install.sh"
+	"${REF_BASE_DIR_PATH}/install.sh"
 
 
 
