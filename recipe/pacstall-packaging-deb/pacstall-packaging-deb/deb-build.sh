@@ -81,11 +81,11 @@ mod_packaging_prepare () {
 mod_packaging_start () {
 
 
-	./clean.sh
+	"${REF_BASE_DIR_PATH}/clean.sh"
 
-	./build.sh
+	"${REF_BASE_DIR_PATH}//build.sh"
 
-	./install.sh
+	"${REF_BASE_DIR_PATH}//install.sh"
 
 
 
