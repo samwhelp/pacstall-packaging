@@ -9,7 +9,18 @@
 
 ## Subject
 
+* [Recipe](#recipe)
 * [Link](#link)
+
+
+
+
+## Recipe
+
+| Recipe |
+| ------ |
+| [pacstall-packaging-srcdeb](https://github.com/samwhelp/pacstall-packaging/tree/main/recipe/pacstall-packaging-srcdeb/pacstall-packaging-srcdeb) |
+| [pacstall-packaging-deb](https://github.com/samwhelp/pacstall-packaging/tree/main/recipe/pacstall-packaging-deb/pacstall-packaging-deb) |
 
 
 
