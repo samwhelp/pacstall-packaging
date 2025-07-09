@@ -19,7 +19,7 @@ DESTDIR := $(REF_BUILD_DIR_PATH)/deb/$(REF_SUBJECT_NAME)
 
 
 
-default: build
+default: help
 .PHONY: default
 
 
