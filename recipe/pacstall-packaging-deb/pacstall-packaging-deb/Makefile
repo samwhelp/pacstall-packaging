@@ -39,6 +39,8 @@ help:
 	@echo
 	@echo '	$$ make deb-build'
 	@echo
+	@echo '	$$ make deb-install'
+	@echo
 .PHONY: help
 
 
