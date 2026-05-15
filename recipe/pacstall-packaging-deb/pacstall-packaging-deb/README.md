@@ -10,6 +10,7 @@
 * [Source](#source)
 * [Howto](#howto)
 * [Pacscript](#pacscript)
+* [Reference](#reference)
 
 
 
@@ -82,3 +83,10 @@ run to finish install
 ``` sh
 sudo apt-get install -f
 ```
+
+
+
+
+## Reference
+
+* [pacstall.pacscript](https://github.com/pacstall/pacstall-programs/blob/master/packages/pacstall/pacstall.pacscript)

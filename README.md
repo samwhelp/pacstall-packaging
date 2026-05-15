@@ -12,6 +12,7 @@
 * [Recipe](#recipe)
 * [Pacscript](#pacscript)
 * [Link](#link)
+* [Reference](#reference)
 
 
 
@@ -47,3 +48,10 @@
 | ---- | ------ |
 | [deb-coffee](https://samwhelp.github.io/deb-coffee/) | [GitHub](https://github.com/samwhelp/deb-coffee) |
 | [deb-recipe](https://samwhelp.github.io/deb-recipe/) | [GitHub](https://github.com/samwhelp/deb-recipe) |
+
+
+
+
+## Reference
+
+* [pacstall.pacscript](https://github.com/pacstall/pacstall-programs/blob/master/packages/pacstall/pacstall.pacscript)

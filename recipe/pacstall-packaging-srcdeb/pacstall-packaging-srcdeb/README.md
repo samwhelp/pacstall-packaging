@@ -10,6 +10,7 @@
 * [Source](#source)
 * [Howto](#howto)
 * [Pacscript](#pacscript)
+* [Reference](#reference)
 
 
 
@@ -43,3 +44,10 @@ make help
 | [deb-coffee-gruvbox](https://github.com/samwhelp/deb-coffee-gruvbox) |
 | [deb-coffee-grub](https://github.com/samwhelp/deb-coffee-grub) |
 | [deb-coffee-sddm](https://github.com/samwhelp/deb-coffee-sddm) |
+
+
+
+
+## Reference
+
+* [pacstall.pacscript](https://github.com/pacstall/pacstall-programs/blob/master/packages/pacstall/pacstall.pacscript)
